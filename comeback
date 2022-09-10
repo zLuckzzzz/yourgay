@@ -1,0 +1,116 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ComeBack HUB", "LightTheme")
+local Tab = Window:NewTab("Farm (indetectável)")
+local Section = Tab:NewSection("Treinamento")
+Section:NewKeybind("ON/OFF GUI", "KeybindInfo", Enum.KeyCode.Q, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("BlackHub", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FastyGame31/black-hub/main/fuck%20you"))()
+end)
+Section:NewToggle("Fast Fist (Cristal)", "ToggleInfo", function(state)
+    if state then
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2275, 1943, 1054)
+        getgenv().AutoFist = true
+    
+    while AutoFist == true do
+        for FastFS = 1,9 do 
+            wait()
+    local args = {[1] = {[1] = "+FS3"}}
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+    end
+    end
+    else
+        getgenv().AutoFist = false
+
+while AutoFist == true do
+    for FastFS = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+FS3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+    end
+end
+end
+end)
+Section:NewToggle("Fast Psychic (aperta tecla 3 fdp)", "ToggleInfo", function(state)
+    if state then
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2535, 5486, -530)
+        getgenv().AutoPsychic = true
+    
+    while AutoPsychic == true do
+        for FastPP = 1,9 do 
+            wait()
+    local args = {[1] = {[1] = "+PP3"}}
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+    end
+    end
+    else
+        while AutoPsychic == true do
+            for FastPP = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+PP3"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
+    end
+end)
+
+Section:NewButton("AntiAFK", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/E7HCF6HV", true))()
+end)
+
+local on
+local keybind=Enum.KeyCode.F1
+local keybindEnd=Enum.KeyCode.F2
+local UserInputService=game:GetService("UserInputService")
+local RunService=game:GetService("RunService")
+local plr=game:GetService("Players").LocalPlayer
+local mouse=plr:GetMouse()
+
+local sg=Instance.new("ScreenGui",plr.PlayerGui)
+local f=Instance.new("TextLabel",sg)
+f.Size=UDim2.new(0,25,0,10)
+f.BackgroundColor3=Color3.fromRGB(180,50,50)
+f.Visible=false
+f.Text="On"
+f.TextSize=11
+
+local vu = game:GetService("VirtualUser")
+local function CC()
+vu:CaptureController();
+end 
+local function CB()
+local v2 = Vector2.new();
+vu:ClickButton1(v2);
+end
+
+function Start(a,b)
+   if a.KeyCode==keybind then
+       on=true
+       a=RunService.Stepped:Connect(function()
+           if on then
+               CC();
+               CB();
+               f.Visible=true
+               f.Position=UDim2.new(0,mouse.X-12.5,0,mouse.Y-15)
+           else
+               a:Disconnect()
+           end
+       end)
+       f.Visible=false
+   end
+end
+
+function Stop(a,b)
+   if a.KeyCode==keybindEnd then
+       on=false
+       f.Visible=false
+   end
+end
+
+UserInputService.InputBegan:connect(Start)
+UserInputService.InputEnded:connect(Stop)
