@@ -77,7 +77,24 @@ Wait(2.)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
     end
 end)
+Section:NewToggle("Travar player", "ToggleInfo", function(state)
+    if state then
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-243, 292, -327)
+        local Player = game.Players.LocalPlayer
 
+local Char = Player.Character or Player.CharacterAdded:Wait()
+Char.Archivable = true
+Char:WaitForChild("HumanoidRootPart").Anchored = true
+    else
+        local Player = game.Players.LocalPlayer
+
+local Char = Player.Character or Player.CharacterAdded:Wait()
+Char.Archivable = true
+Char:WaitForChild("HumanoidRootPart").Anchored = false
+    end
+end)
 local on
 local keybind=Enum.KeyCode.F1
 local keybindEnd=Enum.KeyCode.F2
