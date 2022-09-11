@@ -62,6 +62,21 @@ end)
 Section:NewButton("AntiAFK", "ButtonInfo", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/E7HCF6HV", true))()
 end)
+Section:NewButton("Rejoin", "Leave the server and join again", function()
+    local ts = game:GetService("TeleportService")
+	local p = game:GetService("Players").LocalPlayer
+
+	ts:Teleport(game.PlaceId, p)
+end)
+
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(function(inst)
+    if inst.KeyCode == Enum.KeyCode.F3 then
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+    end
+end)
 
 local on
 local keybind=Enum.KeyCode.F1
