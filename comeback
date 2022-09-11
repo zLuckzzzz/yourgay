@@ -79,6 +79,20 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,
 end)
 Section:NewToggle("Travar player", "ToggleInfo", function(state)
     if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        wait(1.2)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-4094, -227, 2560)
+        local Player = game.Players.LocalPlayer
+        wait(0.40)
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
         hum.CFrame = CFrame.new(339, 271, -673)
