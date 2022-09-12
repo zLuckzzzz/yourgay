@@ -9,21 +9,37 @@ Section:NewButton("BlackHub", "ButtonInfo", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/FastyGame31/black-hub/main/fuck%20you"))()
 end)
 
-Section:NewToggle("Fast Psychic (aperta tecla 3 fdp)", "ToggleInfo", function(state)
+Section:NewToggle("Fast Psychic", "ToggleInfo", function(state)
     if state then
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
-        hum.CFrame = CFrame.new(-2535, 5486, -530)
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2530, 5486, -533)
+        local Player = game.Players.LocalPlayer
         getgenv().AutoPsychic = true
     
-    while AutoPsychic == true do
-        for FastPP = 1,9 do 
-            wait()
-    local args = {[1] = {[1] = "+PP3"}}
-    game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-    end
-    end
+while AutoPsychic == true do
+    for FastPP = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+PP3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
     else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
+        getgenv().AutoPsychic = false
+    
         while AutoPsychic == true do
             for FastPP = 1,9 do 
                 wait()
@@ -115,32 +131,22 @@ Section:NewButton("CMD-X", "Find out for yourself", function()
 end)
 local Tab = Window:NewTab("Outros treinos")
 local Section = Tab:NewSection("Barata de tênis")
-Section:NewToggle("Fist bilhao", "ToggleInfo", function(state)
+Section:NewToggle("Fast Fist bilhão", "ToggleInfo", function(state)
     if state then
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
-        hum.CFrame = CFrame.new(-139, 239, 572)
+        hum.CFrame = CFrame.new(142, 241, 634)
         local Player = game.Players.LocalPlayer
-        wait(0.10)
-        local Char = Player.Character or Player.CharacterAdded:Wait()
-Char.Archivable = true
-Char:WaitForChild("HumanoidRootPart").Anchored = true
-wait(0.25)
-Player.Character.UpperTorso.Waist:Destroy()
-wait(0)
-local Char = Player.Character or Player.CharacterAdded:Wait()
-Char.Archivable = true
-Char:WaitForChild("HumanoidRootPart").Anchored = true
-Player.Character.LowerTorso:BreakJoints()
-wait(0)
-local Char = Player.Character or Player.CharacterAdded:Wait()
-Char.Archivable = true
-Char:WaitForChild("HumanoidRootPart").Anchored = true
-wait(0.10)
-plr = game.Players.LocalPlayer
-	hum = plr.Character.HumanoidRootPart
-	hum.CFrame = CFrame.new(1176, 4789, -2293)
-    getgenv().AutoFist = true
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(1176, 4789, -2293)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoFist = true
     
 while AutoFist == true do
     for FastFS = 1,9 do 
@@ -150,17 +156,22 @@ game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 end
 end
     else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
         getgenv().AutoFist = false
     
-while AutoFist == true do
-    for FastFS = 1,9 do 
-        wait()
-local args = {[1] = {[1] = "+FS4"}}
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-end
-end
+        while AutoFist == true do
+            for FastFS = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+FS4"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
     end
 end)
+
 local on
 local keybind=Enum.KeyCode.F1
 local keybindEnd=Enum.KeyCode.F2
