@@ -65,7 +65,7 @@ Section:NewToggle("Fast Fist (Cristal, indetectavel)", "ToggleInfo", function(st
         wait(1.3)
         plr = game.Players.LocalPlayer
         hum = plr.Character.HumanoidRootPart
-        hum.CFrame = CFrame.new(-4094, -227, 2560)
+        hum.CFrame = CFrame.new(447, -367, -1718)
         local Player = game.Players.LocalPlayer
         wait(0.40)
         plr = game.Players.LocalPlayer
