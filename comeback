@@ -189,6 +189,55 @@ wait(0)
         end
     end
 end)
+Section:NewToggle("Fast psy bilhão", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2580, 5502, -429)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoPsychic = true
+    
+while AutoPsychic == true do
+    for FastPP = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+PP4"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
+        getgenv().AutoPsychic = false
+    
+        while AutoPsychic == true do
+            for FastPP = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+PP4"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
+    end
+end)
 
 local on
 local keybind=Enum.KeyCode.F1
