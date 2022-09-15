@@ -1,3 +1,8 @@
+local useridwhitelist = loadstring(game:HttpGet("https://pastebin.com/raw/5YEpzMUV",true))()
+if useridwhitelist[game:service('Players').LocalPlayer.UserId] then
+print("User whitelisted")
+
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("ComeBack HUB", "LightTheme")
 local Tab = Window:NewTab("Farm (indetectável)")
@@ -238,7 +243,104 @@ wait(0)
         end
     end
 end)
+Section:NewToggle("Fast Fist 100B", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
 
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(1381, 9274, 1647)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoFist = true
+    
+while AutoFist == true do
+    for FastFS = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+FS5"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+        Wait(2.)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+        wait(0)
+                getgenv().AutoFist = false
+            
+                while AutoFist == true do
+                    for FastFS = 1,9 do 
+                        wait()
+                local args = {[1] = {[1] = "+FS5"}}
+                game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+                end
+                end
+    end
+end)
+Section:NewToggle("Fast Psy 1T", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2605, 5532, -499)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoPsychic = true
+    
+while AutoPsychic == true do
+    for FastPP = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+PP5"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+        Wait(2.)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+        wait(0)
+                getgenv().AutoPsychic = false
+            
+                while AutoPsychic == true do
+                    for FastPP = 1,9 do 
+                        wait()
+                local args = {[1] = {[1] = "+PP5"}}
+                game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+                end
+                end
+    end
+end)
 local on
 local keybind=Enum.KeyCode.F1
 local keybindEnd=Enum.KeyCode.F2
@@ -290,3 +392,4 @@ end
 
 UserInputService.InputBegan:connect(Start)
 UserInputService.InputEnded:connect(Stop)
+end
