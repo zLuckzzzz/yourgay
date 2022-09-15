@@ -1,0 +1,292 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ComeBack HUB", "LightTheme")
+local Tab = Window:NewTab("Farm (indetectável)")
+local Section = Tab:NewSection("Treinamento")
+Section:NewKeybind("ON/OFF GUI", "KeybindInfo", Enum.KeyCode.Q, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("BlackHub", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FastyGame31/black-hub/main/fuck%20you"))()
+end)
+
+Section:NewToggle("Fast Psychic", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2547, 5486, -522)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoPsychic = true
+    
+while AutoPsychic == true do
+    for FastPP = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+PP3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
+        getgenv().AutoPsychic = false
+    
+        while AutoPsychic == true do
+            for FastPP = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+PP3"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
+    end
+end)
+
+Section:NewButton("AntiAFK", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/E7HCF6HV", true))()
+end)
+Section:NewButton("Rejoin", "Leave the server and join again", function()
+    local ts = game:GetService("TeleportService")
+	local p = game:GetService("Players").LocalPlayer
+
+	ts:Teleport(game.PlaceId, p)
+end)
+
+local Imput = game:GetService("UserInputService")
+Imput.InputBegan:connect(function(inst)
+    if inst.KeyCode == Enum.KeyCode.F3 then
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+    end
+end)
+Section:NewToggle("Fast Fist (Cristal, indetectavel)", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        wait(1.3)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(447, -367, -1718)
+        local Player = game.Players.LocalPlayer
+        wait(0.40)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(339, 271, -673)
+        local Player = game.Players.LocalPlayer
+
+local Char = Player.Character or Player.CharacterAdded:Wait()
+Char.Archivable = true
+Char:WaitForChild("HumanoidRootPart").Anchored = true
+getgenv().AutoFist = true
+    
+while AutoFist == true do
+    for FastFS = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+FS3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        local Player = game.Players.LocalPlayer
+
+local Char = Player.Character or Player.CharacterAdded:Wait()
+Char.Archivable = true
+Char:WaitForChild("HumanoidRootPart").Anchored = false
+getgenv().AutoFist = false
+    
+while AutoFist == true do
+    for FastFS = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+FS3"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    end
+end)
+local Tab = Window:NewTab("Admins")
+local Section = Tab:NewSection("Cuidado com oq vai fazer")
+Section:NewButton("InfYield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+Section:NewButton("Fastes Admin", "Admin GUI, but also void", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
+Section:NewButton("CMD-X", "Find out for yourself", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+local Tab = Window:NewTab("Outros treinos")
+local Section = Tab:NewSection("Barata de tênis")
+Section:NewToggle("Fast Fist bilhão", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(1176, 4789, -2293)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoFist = true
+    
+while AutoFist == true do
+    for FastFS = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+FS4"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
+        getgenv().AutoFist = false
+    
+        while AutoFist == true do
+            for FastFS = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+FS4"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
+    end
+end)
+Section:NewToggle("Fast psy bilhão", "ToggleInfo", function(state)
+    if state then
+        local args = {
+            [1] = {
+                [1] = "Skill_Invisible",
+                [2] = "Start"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(142, 241, 634)
+        local Player = game.Players.LocalPlayer
+        wait(1)
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Destroy()
+        wait(1)
+        game.Players.LocalPlayer.Character.LowerTorso:BreakJoints()
+        wait(1)
+        plr = game.Players.LocalPlayer
+        hum = plr.Character.HumanoidRootPart
+        hum.CFrame = CFrame.new(-2580, 5502, -429)
+        local Player = game.Players.LocalPlayer
+        getgenv().AutoPsychic = true
+    
+while AutoPsychic == true do
+    for FastPP = 1,9 do 
+        wait()
+local args = {[1] = {[1] = "+PP4"}}
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+end
+    else
+        game.ReplicatedStorage.RemoteEvent:FireServer({"Respawn"})
+Wait(2.)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(324,249,846)
+wait(0)
+        getgenv().AutoPsychic = false
+    
+        while AutoPsychic == true do
+            for FastPP = 1,9 do 
+                wait()
+        local args = {[1] = {[1] = "+PP4"}}
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+        end
+        end
+    end
+end)
+
+local on
+local keybind=Enum.KeyCode.F1
+local keybindEnd=Enum.KeyCode.F2
+local UserInputService=game:GetService("UserInputService")
+local RunService=game:GetService("RunService")
+local plr=game:GetService("Players").LocalPlayer
+local mouse=plr:GetMouse()
+
+local sg=Instance.new("ScreenGui",plr.PlayerGui)
+local f=Instance.new("TextLabel",sg)
+f.Size=UDim2.new(0,25,0,10)
+f.BackgroundColor3=Color3.fromRGB(180,50,50)
+f.Visible=false
+f.Text="On"
+f.TextSize=11
+
+local vu = game:GetService("VirtualUser")
+local function CC()
+vu:CaptureController();
+end 
+local function CB()
+local v2 = Vector2.new();
+vu:ClickButton1(v2);
+end
+
+function Start(a,b)
+   if a.KeyCode==keybind then
+       on=true
+       a=RunService.Stepped:Connect(function()
+           if on then
+               CC();
+               CB();
+               f.Visible=true
+               f.Position=UDim2.new(0,mouse.X-12.5,0,mouse.Y-15)
+           else
+               a:Disconnect()
+           end
+       end)
+       f.Visible=false
+   end
+end
+
+function Stop(a,b)
+   if a.KeyCode==keybindEnd then
+       on=false
+       f.Visible=false
+   end
+end
+
+UserInputService.InputBegan:connect(Start)
+UserInputService.InputEnded:connect(Stop)
