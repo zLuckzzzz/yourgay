@@ -1,3 +1,5 @@
+if PlayerId ~= 517665105 then
+
 local useridwhitelist = loadstring(game:HttpGet("https://pastebin.com/raw/5YEpzMUV",true))()
 if useridwhitelist[game:service('Players').LocalPlayer.UserId] then
 print("User whitelisted")
@@ -499,4 +501,36 @@ end
 
 UserInputService.InputBegan:connect(Start)
 UserInputService.InputEnded:connect(Stop)
+end
+
+while not game:IsLoaded() or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer or not game:GetService("Players").LocalPlayer.PlayerGui do wait() end
+wait(2)
+
+function PlayerJoined(text)
+    game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+        Text = text;
+        Color = Color3.fromRGB(0, 255, 26);
+        Font = Enum.Font.SourceSansBold;
+        TextSize = 20
+    })
+end
+
+
+function PlayerLeft(text)
+    game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+        Text = text;
+        Color = Color3.fromRGB(255, 0, 0);
+        Font = Enum.Font.SourceSansBold;
+        TextSize = 20
+    })
+end
+
+
+game:GetService("Players").PlayerAdded:Connect(function(whojoined)
+    PlayerJoined(whojoined.DisplayName.." (@"..whojoined.Name..") entrou no servidor!")
+end)
+
+game:GetService("Players").PlayerRemoving:Connect(function(wholeft)
+    PlayerLeft(wholeft.DisplayName.." (@"..wholeft.Name..") kitou desse jogo horrível")
+end)
 end
