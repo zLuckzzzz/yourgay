@@ -259,7 +259,7 @@ if PlayerId ~= 517665105 then
             hum = plr.Character.HumanoidRootPart
             hum.CFrame = CFrame.new(-2571, 5372, -519)
             local Player = game.Players.LocalPlayer
-            wait(0)
+            wait(0.5)
             local Player = game.Players.LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() Char.Archivable = true Char:WaitForChild("HumanoidRootPart").Anchored = true
             wait(1)
             getgenv().AutoPsychic = true
