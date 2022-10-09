@@ -254,12 +254,14 @@ if PlayerId ~= 517665105 then
             }
             
             game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-            wait(1)
+            wait(0.5)
             plr = game.Players.LocalPlayer
             hum = plr.Character.HumanoidRootPart
-            hum.CFrame = CFrame.new(-2559, 5377, -466)
+            hum.CFrame = CFrame.new(-2571, 5372, -519)
             local Player = game.Players.LocalPlayer
-            wait(0.8)
+            wait(0)
+            local Player = game.Players.LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() Char.Archivable = true Char:WaitForChild("HumanoidRootPart").Anchored = true
+            wait(1)
             getgenv().AutoPsychic = true
         
     while AutoPsychic == true do
@@ -267,23 +269,26 @@ if PlayerId ~= 517665105 then
             wait()
     local args = {[1] = {[1] = "+PP6"}}
     game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-        end
+    end
     end
         else
             plr = game.Players.LocalPlayer
             hum = plr.Character.HumanoidRootPart
-            hum.CFrame = CFrame.new(-2545, 5412, -493)
+            hum.CFrame = CFrame.new(-2540, 5409, -490)
             local Player = game.Players.LocalPlayer
-            wait(0.9)
-            local args = {
-                [1] = {
-                    [1] = "Skill_Invisible",
-                    [2] = "Stop"
+            wait(0.7)
+                local args = {
+                    [1] = {
+                        [1] = "Skill_Invisible",
+                        [2] = "Stop"
+                    }
                 }
-            }
-            
-            game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-            wait(0.5)
+                
+                game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+                wait(0)
+            local Player = game.Players.LocalPlayer local Char = Player.Character or Player.CharacterAdded:Wait() Char.Archivable = true Char:WaitForChild("HumanoidRootPart").Anchored = false
+            wait(0)
+
             getgenv().AutoPsychic = false
         
             while AutoPsychic == true do
@@ -291,7 +296,7 @@ if PlayerId ~= 517665105 then
                     wait()
             local args = {[1] = {[1] = "+PP6"}}
             game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
-                end
+            end
             end
         end
     end)
