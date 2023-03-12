@@ -4,7 +4,7 @@ print("User whitelisted")
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("EternalzHub", "Serpent")
+local Window = Library.CreateLib("EternalzHubb", "Serpent")
 local Tab = Window:NewTab("Misc")
 local Section = Tab:NewSection("Scripts")
 Section:NewKeybind("ON/OFF GUI", "Close and Open the GUI", Enum.KeyCode.Q, function()
